@@ -1,5 +1,5 @@
 CC=g++
-exe=SDL_Game
+exe=game
 libs=-lSDL
 
 all:
