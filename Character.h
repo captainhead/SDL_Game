@@ -1,13 +1,22 @@
 #include <SDL/SDL.h>
 
+/*
+*
+* Character
+*
+* Class to manage the player character
+*
+*/
 
 class Character{
 private:
-	SDL_Surface *sprite;
 	
 public:
-	int x,y;
+	SDL_Surface *sprite;
+	SDL_Rect clip; // Clip area of the sprite to currently display
 	
-	Character(SDL_Surface *character_sprite);
+	
+	// Create a character with a given sprite sheet, and display dimension of widthxheight
+	Character(SDL_Surface *character_sprite, int width, int height);
 	~Character();
 };
